@@ -1,0 +1,67 @@
+Last login: Sat Jul 25 14:24:19 on ttys000
+melissavanzella@Melissas-MacBook-Air ~ % cd Broker
+melissavanzella@Melissas-MacBook-Air Broker % ls
+myenv
+melissavanzella@Melissas-MacBook-Air Broker % cd myenv
+melissavanzella@Melissas-MacBook-Air myenv % ls
+bin		include		manage.py	pyvenv.cfg
+db.sqlite3	lib		mysite
+melissavanzella@Melissas-MacBook-Air myenv % python manage.py startapp blog
+melissavanzella@Melissas-MacBook-Air myenv % ls
+bin		db.sqlite3	lib		mysite
+blog		include		manage.py	pyvenv.cfg
+melissavanzella@Melissas-MacBook-Air myenv % cd blog
+melissavanzella@Melissas-MacBook-Air blog % ls
+__init__.py	apps.py		models.py	views.py
+admin.py	migrations	tests.py
+melissavanzella@Melissas-MacBook-Air blog % cd..
+zsh: command not found: cd..
+melissavanzella@Melissas-MacBook-Air blog % cd ..
+melissavanzella@Melissas-MacBook-Air myenv % python manage.py makemigrations blog
+Migrations for 'blog':
+  blog/migrations/0001_initial.py
+    - Create model Post
+melissavanzella@Melissas-MacBook-Air myenv % python manage.py migrate blog    
+Operations to perform:
+  Apply all migrations: blog
+Running migrations:
+  Applying blog.0001_initial... OK
+melissavanzella@Melissas-MacBook-Air myenv % python manage.py createsupersuser
+Unknown command: 'createsupersuser'. Did you mean createsuperuser?
+Type 'manage.py help' for usage.
+melissavanzella@Melissas-MacBook-Air myenv % python manage.py createsuperuser 
+Username (leave blank to use 'melissavanzella'): 
+Email address: vanzellam@gmail.com
+Password: 
+Password (again): 
+Superuser created successfully.
+melissavanzella@Melissas-MacBook-Air myenv % git init
+Initialized empty Git repository in /Users/melissavanzella/Broker/myenv/.git/
+melissavanzella@Melissas-MacBook-Air myenv % git config --global user.name "melissavanzella"
+melissavanzella@Melissas-MacBook-Air myenv % git config --global user.email melvanze@gmail.com
+melissavanzella@Melissas-MacBook-Air myenv % vi .gitignore
+
+*.pyc
+*~
+__pycache__
+myenv
+db.sqlite3
+/static
+.DS_Store
+
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+-- INSERT --recording @u
